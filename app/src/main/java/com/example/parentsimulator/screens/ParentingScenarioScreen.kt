@@ -48,7 +48,7 @@ fun ParentingScenarioScreen(navController: NavController) {
             Spacer(Modifier.height(8.dp))
             
             Text(
-                "你的孩子今年九岁，围棋业余六段选手，被誉为围棋天才。在一次比赛中，他输掉了比赛，你会选择：",
+                "你的孩子今年九岁，围棋业余六段选手，被誉为围棋天才。在一次比赛中，他输掉了比赛，您会选择：",
                 fontSize = 16.sp,
                 textAlign = TextAlign.Start,
                 modifier = Modifier.fillMaxWidth()
@@ -99,7 +99,7 @@ fun ParentingScenarioScreen(navController: NavController) {
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Text(
-                        "D 避免旧伤复发，选择冷暴力或阴阳怪气来激励孩子。",
+                        "D 避免旧伤复发，选择冷暴力或阴阳怪气来让孩子自责。",
                         textAlign = TextAlign.Start,
                         modifier = Modifier.fillMaxWidth()
                     )

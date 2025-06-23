@@ -48,7 +48,7 @@ fun GameOverScreen(navController: NavController) {
                     Text(
                         "结局：",
                         fontSize = 20.sp,
-                        fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
+                        fontWeight = FontWeight.Bold,
                         textAlign = TextAlign.Center,
                         modifier = Modifier.fillMaxWidth()
                     )
@@ -76,7 +76,7 @@ fun GameOverScreen(navController: NavController) {
                     Text(
                         "跳楼啦！",
                         fontSize = 32.sp,
-                        fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
+                        fontWeight = FontWeight.Bold,
                         textAlign = TextAlign.Center,
                         modifier = Modifier.fillMaxWidth()
                     )
@@ -120,25 +120,23 @@ fun GameOverScreen(navController: NavController) {
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
                 Button(
-                    onClick = { 
-                        // Exit the app
-                        android.os.Process.killProcess(android.os.Process.myPid())
-                    },
-                    modifier = Modifier.fillMaxWidth()
-                ) {
-                    Text("退出游戏")
-                }
-
-                Button(
-                    onClick = { 
-                        // Navigate back to the first screen
+                    onClick = {
                         navController.navigate("generateChild") {
                             popUpTo(0) { inclusive = true }
                         }
                     },
                     modifier = Modifier.fillMaxWidth()
                 ) {
-                    Text("再生一个")
+                    Text("这孩子没遗传到我的好基因，再生一个")
+                }
+
+                Button(
+                    onClick = {
+                        android.os.Process.killProcess(android.os.Process.myPid())
+                    },
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Text("养孩子太难，不玩了")
                 }
             }
         }
