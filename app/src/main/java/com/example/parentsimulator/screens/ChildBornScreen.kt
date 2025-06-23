@@ -74,7 +74,7 @@ fun ChildBornScreen(navController: NavController) {
                     modifier = Modifier.fillMaxWidth()
                 )
                 Spacer(Modifier.height(16.dp))
-                Button(onClick = { /* TODO */ }) { Text("开始带娃") }
+                Button(onClick = { navController.navigate("parentingScenario") }) { Text("开始带娃") }
             }
         }
     }
